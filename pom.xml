@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ph.edu.dlsu.lbycpei</groupId>
+    <!-- Project Metadata -->
+    <groupId>ph.edu.dlsu.lbycpob</groupId>
     <artifactId>QuizMasterApp</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1</version>
     <name>QuizMasterApp</name>
 
     <properties>
@@ -25,11 +26,27 @@
             <artifactId>javafx-media</artifactId>
             <version>25</version>
         </dependency>
+
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>5.11</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.18</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.34</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
