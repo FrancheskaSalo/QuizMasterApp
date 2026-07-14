@@ -243,3 +243,4 @@ Algebra,Find the first three terms of the Taylor series for e^x about x = 0,1 + 
 Algebra,What is the Taylor series for sin(x) about x = 0?,x - x³/6 + x⁵/120 - ...,1 + x + x²/2 + ...,x + x³/6 + x⁵/120 + ...,1 - x²/2 + x⁴/24 - ...,0,"sin(x) about x = 0"
 Calculus,Solve dy/dx = 3y,y = Ce^(3x),y = 3x + C,y = 3Ce^x,y = C + 3x,0,"dy/dx = 3y"
 Calculus,Find the general solution to dy/dx = x,y = x²/2 + C,y = x + C,y = 2x + C,y = x² + C,0,"dy/dx = x"
+
