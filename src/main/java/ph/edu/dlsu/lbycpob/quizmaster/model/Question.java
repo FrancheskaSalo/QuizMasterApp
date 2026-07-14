@@ -1,6 +1,7 @@
 package ph.edu.dlsu.lbycpob.quizmaster.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 // Question.java
@@ -35,6 +36,7 @@ public class Question {
     }
 
     public String getCategory(){
+        Arrays.asList("All", "Algebra", "Geometry", "Calculus");
         return category;
     }
 

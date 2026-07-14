@@ -144,7 +144,7 @@ public class QuizModel {
     }
 
     public List<String> getCategories() {
-        // Arrays.asList("All", "Algebra", "Geometry", "Calculus");
+        Arrays.asList("All", "Algebra", "Geometry", "Calculus");
         return categories;
     }
 }

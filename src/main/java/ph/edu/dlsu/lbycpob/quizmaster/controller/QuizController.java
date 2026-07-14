@@ -5,6 +5,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ph.edu.dlsu.lbycpob.quizmaster.model.QuizModel;
 import ph.edu.dlsu.lbycpob.quizmaster.utils.AudioClipManager;
 import ph.edu.dlsu.lbycpob.quizmaster.utils.SoundConfig;
@@ -15,6 +17,9 @@ import ph.edu.dlsu.lbycpob.quizmaster.model.Question;
 import java.util.Objects;
 
 public class QuizController {
+
+    private static final Logger logger = LoggerFactory.getLogger(QuizController.class);
+
     private QuizModel model;
     private QuizView view;
 
