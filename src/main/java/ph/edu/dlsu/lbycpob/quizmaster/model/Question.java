@@ -13,7 +13,7 @@ public class Question {
     private String equation;
 
 
-    private Question(int correctAnswer,String category, String questionText, List<String> options, String equation) {
+    public Question(int correctAnswer, String category, String questionText, List<String> options, String equation) {
         // TODO:
 // this.correctAnswer = correctAnswer;
         this.category = category;
@@ -22,14 +22,18 @@ public class Question {
         this.equation = equation;
     }
 
+    public Question(String category, String questionText, List<String> options, int correctAnswer, String equation) {
+
+    }
+
     // Getters
     // TODO:
 
-/*
-public int getCorrectAnswer(){
-    return correctAnswer;
-}
-*/
+
+    public int getCorrectAnswer(){
+        return correctAnswer;
+    }
+
     public String getCategory(){
         return category;
     }
