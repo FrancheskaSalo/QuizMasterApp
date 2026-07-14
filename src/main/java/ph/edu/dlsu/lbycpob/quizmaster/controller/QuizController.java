@@ -60,6 +60,7 @@ public class QuizController {
     }
 
     private void startQuiz() {
+        logger.info("Starting Quiz");
         String selectedCategory = view.getCategoryComboBox().getValue();
         if (selectedCategory == null) {
             showAlert("Please select a category!");
@@ -85,9 +86,10 @@ public class QuizController {
      */
     private AudioClip loadSound(String soundFile) {
         try {
-            return new AudioClip(Objects.requireNonNull(getClass().getResource(SoundConfig.SOUND_PATH + soundFile)).toExternalForm());
+            return new
+            AudioClip(Objects.requireNonNull(getClass().getResource(SoundConfig.SOUND_PATH + soundFile)).toExternalForm());
         } catch (Exception e) {
-            System.err.println("Warning: Could not load sound file: " + soundFile);
+            logger.error("Warning: Could not load sound file: {}", soundFile);
             return null;
         }
     }
@@ -98,11 +100,13 @@ public class QuizController {
      * @param sound The sound to play
      */
     private void playSound(AudioClip sound) {
+        logger.info("Playing sound: {}", sound);
         AudioClipManager.getInstance().playSound(sound);
     }
 
 
     private void loadNextQuestion() {
+        logger.info("Loading next question");
         Question question = model.getCurrentQuestion();
         if (question != null) {
             view.updateQuestion(question, model.getCurrentQuestionNumber(), model.getTotalQuestions());
@@ -113,6 +117,7 @@ public class QuizController {
     }
 
     private void submitAnswer() {
+        logger.info("Submitting answer");
         RadioButton selected = (RadioButton) view.getOptionsGroup().getSelectedToggle();
         if (selected == null) {
             showAlert("Please select an answer!");
@@ -132,6 +137,7 @@ public class QuizController {
     }
 
     private void nextQuestion() {
+        logger.info("Next question");
         if (model.hasNextQuestion()) {
             loadNextQuestion();
         } else {
@@ -140,6 +146,7 @@ public class QuizController {
     }
 
     private void showResults() {
+        logger.info("Showing results");
         UserProgress progress = model.getUserProgress();
         view.updateResults(model.getScore(), model.getTotalQuestions(), progress, model.hasMistakeQuestions());
         view.showResultScene();
@@ -149,20 +156,24 @@ public class QuizController {
     }
 
     private void restartQuiz() {
+        logger.info("Restarting quiz");
         view.showMenuScene();
     }
 
     private void startBonusRound() {
+        logger.info("Starting bonus round");
         model.startMistakeQuiz();
         view.showQuizScene();
         loadNextQuestion();
     }
 
     private void returnToMenu() {
+        logger.info("Returning to menu");
         view.showMenuScene();
     }
 
     private void showStatistics() {
+        logger.info("Showing statistics");
         UserProgress progress = model.getUserProgress();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -190,6 +201,7 @@ public class QuizController {
     }
 
     private void showAlert(String message) {
+        logger.info("Showing alert: {}", message);
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning");
         alert.setHeaderText(null);
