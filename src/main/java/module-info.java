@@ -3,6 +3,7 @@ module ph.edu.dlsu.lbycpei.quizmaster {
     requires javafx.media;
     requires java.desktop;
     requires com.opencsv;
+    requires org.slf4j;
 
     exports ph.edu.dlsu.lbycpob.quizmaster;
     exports ph.edu.dlsu.lbycpob.quizmaster.controller;
